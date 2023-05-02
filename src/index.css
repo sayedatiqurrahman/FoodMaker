@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.MyContainer {
+    @apply max-w-[1400px] w-[90%] mx-auto
+}
+
+.fontScript {
+    font-size: 140px;
+    font-family: 'Style Script', cursive;
+}
+
+.textShadow {
+    text-shadow: 1px 1px 2px rgb(44, 39, 39), 0 0 1em rgb(8, 8, 17), 0 0 0.2em rgb(8, 8, 20);
+    ;
+}
+
+.font2 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.active {
+    @apply text-yellow-500
+}
+
+body {
+    @apply bg-black text-white
+}

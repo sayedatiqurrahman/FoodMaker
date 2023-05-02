@@ -1,11 +1,13 @@
+import Header from "./Components/Header"
+import TopNav from "./Components/TopNav"
 
 function App() {
 
   return (
-    <>
-      <h1>Hello</h1>
-
-    </>
+    <div className="MyContainer mt-4 ">
+      <TopNav />
+      <Header />
+    </div>
   )
 }
 
