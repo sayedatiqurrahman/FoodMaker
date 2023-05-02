@@ -11,6 +11,8 @@ import Chefs from './Pages/Chefs.jsx';
 import Blog from './Pages/Blog.jsx';
 import Loading from './Components/Loading.jsx';
 import ChefRecipes from './Pages/ChefRecipes.jsx';
+import Registaion from './Pages/Registaion.jsx';
+import LoginForm from './Pages/LoginForm.jsx';
 
 
 const router = createBrowserRouter([
@@ -34,6 +36,12 @@ const router = createBrowserRouter([
       , {
       path: "/blog",
       element: <Blog />
+    }, {
+      path: "/login",
+      element: <LoginForm />
+    }, {
+      path: "/registation",
+      element: <Registaion />
     }
 
     ]

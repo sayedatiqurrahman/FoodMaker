@@ -5,7 +5,7 @@ import { GiCrossedBones } from "react-icons/gi";
 import Tooltip from '@mui/material/Tooltip';
 const TopNav = () => {
     const [showMenu, setShowMenu] = useState(false)
-
+    const [user, setUser] = useState(null)
 
 
     return (
@@ -23,7 +23,9 @@ const TopNav = () => {
 
                 </div>
                 <div>
-                    <img className='h-10 w-10 border border-gray-300 rounded-full' src="https://i.ibb.co/Rbqk5W0/image.png" title='User Name' alt="" />
+                    {user ? <img className='h-10 w-10 border border-gray-300 rounded-full' src="https://i.ibb.co/Rbqk5W0/image.png" title='User Name' alt="" /> : <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/login'} >Login</NavLink>
+                    }
+
                 </div>
             </div>
 
