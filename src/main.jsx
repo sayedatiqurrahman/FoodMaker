@@ -13,7 +13,7 @@ import Loading from './Components/Loading.jsx';
 import ChefRecipes from './Pages/ChefRecipes.jsx';
 import Registaion from './Pages/Registaion.jsx';
 import LoginForm from './Pages/LoginForm.jsx';
-
+import toast, { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +50,7 @@ const router = createBrowserRouter([
     element: <Loading />
   }
 ]);
+
 
 
 

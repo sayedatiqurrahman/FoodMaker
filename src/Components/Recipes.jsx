@@ -2,15 +2,20 @@ import { Card } from 'flowbite-react';
 import React, { useState } from 'react';
 import { FaStar, FaStarHalfAlt, FaThumbsUp } from 'react-icons/fa';
 import Rating from 'react-rating';
-import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Recipes = ({ recipe }) => {
     const { name, image, ingredients, cookingMethod, likes, ratings } = recipe;
     const [favorite, setFavorite] = useState(false)
     const handleFavorite = () => {
-        setFavorite(true);
-
+        if (!favorite) {
+            toast.success('You Selected this as favourite!')
+            setFavorite(true);
+        } else {
+            toast.error('You already Selected this!')
+        }
     }
+    const disabled = true;
     return (
 
 
@@ -44,7 +49,7 @@ const Recipes = ({ recipe }) => {
 
                 </div>
 
-                <button onClick={handleFavorite} className={`px-5 py-2  border-t-2 border-x-2 font-bold  rounded-t-full h-10 -mb-7 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg ${favorite ? 'disabled: text-gray-600 border-gray-500' : 'border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white'}`}  >Favourite</button>
+                <button onClick={handleFavorite} disabled={favorite && disabled} className={`px-5 py-2  border-t-2 border-x-2 font-bold  rounded-t-full h-10 -mb-7 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg ${favorite ? 'text-gray-600 border-gray-500' : 'border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white'}`}  >Favourite</button>
             </Card>
         </div >
 

@@ -2,6 +2,7 @@ import { Outlet, useLoaderData } from "react-router-dom"
 import TopNav from "./Components/TopNav"
 import Footer from "./Components/Fotter"
 import { createContext } from "react"
+import toast, { Toaster } from 'react-hot-toast';
 
 export const DataContext = createContext()
 
@@ -16,6 +17,10 @@ function App() {
         </DataContext.Provider>
       </div>
       <Footer />
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
     </div>
   )
 }
