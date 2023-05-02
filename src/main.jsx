@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    loader: () => fetch('https://server-side-atiqurrahman.vercel.app/')
   },
 ]);
 
