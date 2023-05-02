@@ -3,9 +3,9 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className="h-[calc(100vh-77px)] mt-5 ">
+        <div className="h-[calc(100vh-77px)] mt-5 border-b border-b-gray-400">
             <Carousel>
-                <div className='h-full relative border-b border-b-gray-400'>
+                <div className='h-full relative '>
                     <img
                         className='h-auto md:h-[450px] z-10 lg:h-[600px] absolute bottom-0 left-2'
                         src="https://i.ibb.co/jkk4x08/image.png"
@@ -28,7 +28,7 @@ const Header = () => {
                     <img className='absolute top-1/2 z-0 -translate-y-1/2 -right-6' src="https://i.ibb.co/vLdbbqP/pattern-blackboard-drawn-chalk-gastronomy-icons-vector-cuisine-fast-food-cafe-bright-background-menu.png" alt="" />
 
                 </div>
-                <div className='h-full relative  border-b border-b-gray-400'>
+                <div className='h-full relative  '>
                     <img
                         className='h-auto md:h-[450px] z-10 lg:h-[600px] absolute bottom-0 left-2'
                         src="https://i.ibb.co/jkk4x08/image.png"
@@ -51,7 +51,7 @@ const Header = () => {
                     <img className='absolute top-1 z-0 -translate-y-1/2 -right-6' src="https://i.ibb.co/vLdbbqP/pattern-blackboard-drawn-chalk-gastronomy-icons-vector-cuisine-fast-food-cafe-bright-background-menu.png" alt="" />
 
                 </div>
-                <div className='h-full relative border-b border-b-gray-400'>
+                <div className='h-full relative '>
                     <img
                         className='h-auto md:h-[450px] z-10 lg:h-[600px] absolute bottom-0 left-2'
                         src="https://i.ibb.co/jkk4x08/image.png"
@@ -74,7 +74,7 @@ const Header = () => {
                     <img className='absolute bottom-0 z-0  -right-6' src="https://i.ibb.co/vLdbbqP/pattern-blackboard-drawn-chalk-gastronomy-icons-vector-cuisine-fast-food-cafe-bright-background-menu.png" alt="" />
 
                 </div>
-                <div className='h-full relative border-b border-b-gray-400'>
+                <div className='h-full relative '>
                     <img
                         className='h-auto md:h-[450px] z-10 lg:h-[600px] absolute bottom-0 left-2'
                         src="https://i.ibb.co/jkk4x08/image.png"

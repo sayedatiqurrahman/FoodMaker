@@ -1,22 +1,21 @@
-import { useLoaderData } from "react-router-dom"
-import Header from "./Components/Header"
+import { Outlet, useLoaderData } from "react-router-dom"
 import TopNav from "./Components/TopNav"
-import AllChef from "./Components/allChef"
+import Footer from "./Components/Fotter"
+import { createContext } from "react"
+
+export const DataContext = createContext()
 
 function App() {
   const data = useLoaderData()
   return (
     <div className="MyContainer mt-4 ">
       <TopNav />
-      <Header />
-
-      <div className="my-[130px] text-center ">
-        <h2 className="text-2xl  font2">All The Chefs At Your Fingertips</h2>
-
-        <AllChef data={data} />
-
-
+      <div className="min-h-[calc(100vh-155px)]">
+        <DataContext.Provider value={data}>
+          <Outlet />
+        </DataContext.Provider>
       </div>
+      <Footer />
     </div>
   )
 }

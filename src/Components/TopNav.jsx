@@ -18,10 +18,8 @@ const TopNav = () => {
                 </div>
                 <div className='flex gap-5'>
                     <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/'}>Home</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/pages'}>Pages</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/portfolio'}>PortFolio</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/blogs'}>Blog</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/shop'}>Shop</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/chefs'}>Chefs</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/blog'}>Blog</NavLink>
 
                 </div>
                 <div>
@@ -49,17 +47,9 @@ const TopNav = () => {
 
                 {
                     showMenu ? <div className='flex flex-col justify-center items-center  gap-5'>
-
-
                         <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/'}>Home</NavLink>
-
-                        <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/pages'}>Pages</NavLink>
-
-                        <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/portfolio'}>Portfolio</NavLink>
-
+                        <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/chefs'}>Chefs</NavLink>
                         <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/blog'}>Blog</NavLink>
-
-                        <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/shop'}>Shop</NavLink>
                     </div> : ''
                 }
             </div>

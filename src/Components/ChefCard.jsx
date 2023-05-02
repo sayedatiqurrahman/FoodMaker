@@ -1,78 +1,48 @@
 import { Card } from 'flowbite-react';
 import React from 'react';
+import Rating from 'react-rating';
+import { FaStar, FaStarHalfAlt, FaThumbsUp } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const ChefCard = ({ chef }) => {
-    const { chefPicture, chefName, bio, ratings, likes, yearsOfExperience } = chef
+    const { chefPicture, chefName, bio, ratings, likes, yearsOfExperience, numberOfRecipes } = chef
 
     return (
-        <div className="max-w-sm ">
-            <Card
-                imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
-                imgSrc="https://flowbite.com/docs/images/products/product-1.png"
+
+        <div className='max-w-sm  relative text-left'>
+            <Card className='max-h-[550px] h-auto'
             >
-                <a href="#">
-                    <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                        Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
-                    </h5>
-                </a>
-                <div className="mt-2.5 mb-5 flex items-center">
-                    <svg
-                        className="h-5 w-5 text-yellow-300"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <svg
-                        className="h-5 w-5 text-yellow-300"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <svg
-                        className="h-5 w-5 text-yellow-300"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <svg
-                        className="h-5 w-5 text-yellow-300"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <svg
-                        className="h-5 w-5 text-yellow-300"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <span className="mr-2 ml-3 rounded bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:bg-blue-200 dark:text-blue-800">
-                        5.0
-                    </span>
+                <img src={chefPicture} className='h-[300px] w-full p-[2px] rounded-lg absolute top-0  left-0' alt="" />
+
+
+                <h5 className="text-2xl mt-[300px] font-bold tracking-tight text-gray-900 dark:text-white ">
+                    {chefName}
+                </h5>
+                <div className="font-normal text-gray-700 dark:text-gray-400">
+                    {bio.length > 80 ? <>{bio.slice(0, 80)}... </> : bio}
+                    <p><b>Years of Experience: <span className='text-yellow-500'>{yearsOfExperience}</span> </b></p>
+                    <p><b>Number of Recipes: <span className='text-yellow-500'>{numberOfRecipes}</span></b></p>
+                    <div className='flex justify-between w-full'>
+                        <p className='flex items-center gap-1'><FaThumbsUp /> <b>{likes}</b></p>
+
+                        <p className=''>
+                            <Rating className='ml-2 mr-1 text-amber-500'
+                                placeholderRating={ratings}
+                                readonly
+                                emptySymbol={<FaStarHalfAlt />}
+                                placeholderSymbol={<FaStar />}
+                                fullSymbol={<FaStar />}
+                            />
+                            <b>{ratings}.00</b></p>
+                    </div>
+
+                    <Link to={`../chef/${chef.id}`} className="px-5 py-2  border-t-2 border-x-2 font-bold border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white rounded-t-full h-10 mt-5 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg">View Recipes</Link>
+
                 </div>
-                <div className="flex items-center justify-between">
-                    <span className="text-3xl font-bold text-gray-900 dark:text-white">
-                        $599
-                    </span>
-                    <a
-                        href="#"
-                        className="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    >
-                        Add to cart
-                    </a>
-                </div>
+
             </Card>
-        </div>
+        </div >
+
     );
 };
 
