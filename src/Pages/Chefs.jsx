@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { DataContext } from '../App';
 import AllChef from '../Components/AllChef/allChef';
 import { useNavigation } from 'react-router-dom';
-import Loading from '../Components/Loading';
 
 const Chefs = () => {
     const navigation = useNavigation()

@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -52,7 +53,10 @@ const Footer = () => {
             </div>
             <hr className='border-gray-700' />
             <Link to={'/'}>
-                <img className='h-24 mx-auto ' src="https://i.ibb.co/JHcw0GL/1-image-removebg-preview-1.png" alt="" />
+                <LazyLoadImage
+                    effect='blur'
+                    className='h-24 mx-auto ' src="https://i.ibb.co/JHcw0GL/1-image-removebg-preview-1.png"
+                    alt="" />
             </Link>
             <p className='-mt-8 textShadow '>Copyright © 2023 FoodMaker, Inc.</p>
         </div>

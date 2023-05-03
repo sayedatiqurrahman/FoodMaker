@@ -1,16 +1,22 @@
 import { Carousel } from 'flowbite-react';
 import React from 'react';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+
 const Header = () => {
     return (
         <div className="h-[calc(100vh-77px)] mt-5 border-b border-b-gray-400">
             <Carousel>
-                <div className='h-full relative '>
-                    <img
-                        className='h-auto md:h-[450px] z-10 lg:h-[600px] absolute bottom-0 left-2'
-                        src="https://i.ibb.co/jkk4x08/image.png"
-                        alt="..."
-                    />
+                <div className='h-full relative'>
+                    <div className='absolute left-2 -bottom-2'>
+                        <LazyLoadImage effect='blur'
+                            className='h-auto md:h-[450px] lg:h-[600px]'
+                            src="https://i.ibb.co/jkk4x08/image.png"
+                            alt="Chef"
+                        />
+                    </div>
                     <div className='absolute top-5 lg:left-[330px] z-20 max-w-xl w-full shadow-lg'>
                         <h1 className='fontScript drop-shadow-lg'>Welcome</h1>
 
@@ -29,11 +35,13 @@ const Header = () => {
 
                 </div>
                 <div className='h-full relative  '>
-                    <img
-                        className='h-auto md:h-[450px] z-10 lg:h-[600px] absolute bottom-0 left-2'
-                        src="https://i.ibb.co/jkk4x08/image.png"
-                        alt="..."
-                    />
+                    <div className='absolute left-2 -bottom-2'>
+                        <LazyLoadImage effect='blur'
+                            className='h-auto md:h-[450px] lg:h-[600px]'
+                            src="https://i.ibb.co/jkk4x08/image.png"
+                            alt="Chef"
+                        />
+                    </div>
                     <div className='absolute top-5 lg:left-[330px] z-20 max-w-xl w-full'>
                         <h1 className='fontScript'>Welcome</h1>
 
@@ -52,11 +60,13 @@ const Header = () => {
 
                 </div>
                 <div className='h-full relative '>
-                    <img
-                        className='h-auto md:h-[450px] z-10 lg:h-[600px] absolute bottom-0 left-2'
-                        src="https://i.ibb.co/jkk4x08/image.png"
-                        alt="..."
-                    />
+                    <div className='absolute left-2 -bottom-2'>
+                        <LazyLoadImage effect='blur'
+                            className='h-auto md:h-[450px] lg:h-[600px]'
+                            src="https://i.ibb.co/jkk4x08/image.png"
+                            alt="Chef"
+                        />
+                    </div>
                     <div className='absolute top-5 lg:left-[330px] z-20 max-w-xl w-full'>
                         <h1 className='fontScript'>Welcome</h1>
 
@@ -75,11 +85,13 @@ const Header = () => {
 
                 </div>
                 <div className='h-full relative '>
-                    <img
-                        className='h-auto md:h-[450px] z-10 lg:h-[600px] absolute bottom-0 left-2'
-                        src="https://i.ibb.co/jkk4x08/image.png"
-                        alt="..."
-                    />
+                    <div className='absolute left-2 -bottom-2'>
+                        <LazyLoadImage effect='blur'
+                            className='h-auto md:h-[450px] lg:h-[600px]'
+                            src="https://i.ibb.co/jkk4x08/image.png"
+                            alt="Chef"
+                        />
+                    </div>
                     <div className='absolute top-5 lg:left-[330px] z-20 max-w-xl w-full'>
                         <h1 className='fontScript'>Welcome</h1>
 

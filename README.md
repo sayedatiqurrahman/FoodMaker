@@ -18,4 +18,6 @@ Web Application Feature</h1>
 <li>You can cant see the recipes without login</li>
 <li>You can SubsCribe us at footer section</li>
 <li>You can Message us At home page from contact us Section</li>
+<li>You Download Blog Content as pdf file by Clicking the Generate pdf Button </li>
+<li>Lay Load image feature also added</li>
 </ul>

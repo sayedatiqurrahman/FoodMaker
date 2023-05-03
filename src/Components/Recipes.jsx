@@ -6,6 +6,9 @@ import toast from 'react-hot-toast';
 import { useNavigation } from 'react-router-dom';
 import Loading from './Loading';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Recipes = ({ recipe }) => {
     const navigation = useNavigation()
     if (navigation.state === 'loading') {
@@ -29,7 +32,7 @@ const Recipes = ({ recipe }) => {
         <div className='relative text-left'>
             <Card className=''
             >
-                <img src={image} className='h-[300px] w-full p-[2px] rounded-lg absolute top-0  left-0' alt="" />
+                <LazyLoadImage effect='blur' src={image} className='LazyLoadImage h-[300px]  w-full rounded-lg absolute -top-10 left-0 bg-white p-1 ' alt="" />
 
 
                 <h5 className="text-2xl mt-[300px] font-bold tracking-tight text-gray-900 dark:text-white ">
