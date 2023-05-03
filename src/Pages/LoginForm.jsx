@@ -33,7 +33,7 @@ const LoginForm = () => {
             .then(res => {
                 const user = res.user
                 setSuccess('Login with Google successfully')
-
+                navigate(location?.state?.pathname)
             })
             .catch((err) => setError('Google:' + err))
     }
@@ -45,6 +45,7 @@ const LoginForm = () => {
             .then(res => {
                 const user = res.user
                 setSuccess('Login with GitHub successfully')
+                navigate(location?.state?.pathname)
             })
             .catch((err) => setError('Github:' + err))
     }
