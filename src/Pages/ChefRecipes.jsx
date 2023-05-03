@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaStar, FaStarHalfAlt, FaThumbsUp } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData } from 'react-router-dom';
 import Recipes from '../Components/Recipes';
+import { toast } from 'react-hot-toast';
 
 const ChefRecipes = () => {
     const chef = useLoaderData()
     console.log(chef)
     const { chefPicture, chefName, bio, ratings, likes, yearsOfExperience, numberOfRecipes, thumbnail, recipes } = chef;
+    const [booked, setBooked] = useState(false)
+    const handleFavorite = () => {
+        if (!booked) {
+            toast.success('You Selected Booked this Chef!')
+            setBooked(true);
+        } else {
+            toast.error('You are already Booked this Chef!')
+        }
+    }
+
     return (
         <>
             <div className='flex md:flex-row mt-10 flex-col justify-center gap-5 mx-auto items-center max-w-7xl w-[90%]'>
@@ -35,7 +46,7 @@ const ChefRecipes = () => {
                             <b>{ratings}.00</b> </p>
                     </div>
 
-                    <button className="px-32 py-3  border-r-2 border-y-2 font-bold border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white rounded-r-full h-10 mt-5 -ml-5 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg">Book Now</button>
+                    <button onClick={handleFavorite} disabled={booked && true} className={`px-32 py-3  border-r-2 border-y-2 font-bold  text-xl font2  rounded-r-full h-10 mt-5 -ml-5 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg ${booked ? 'text-gray-600 border-gray-500' : 'border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white'}`} >{booked ? 'Booked' : 'Book Now'}</button>
 
 
                 </div>

@@ -14,12 +14,14 @@ import ChefRecipes from './Pages/ChefRecipes.jsx';
 import Registaion from './Pages/Registaion.jsx';
 import LoginForm from './Pages/LoginForm.jsx';
 import toast, { Toaster } from 'react-hot-toast';
+import ErrorPage from './Pages/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     loader: () => fetch('https://server-side-atiqurrahman.vercel.app/'),
+    errorElement: <ErrorPage />,
     children: [{
       path: "/",
       element: <Home />
