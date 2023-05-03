@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { app } from '../firebase.init';
 // Firebase importaiontion
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 export const AuthContext = createContext(null)
 const AuthProvider = ({ children }) => {
@@ -33,6 +33,12 @@ const AuthProvider = ({ children }) => {
         setLoading(true)
         return signInWithPopup(auth, GitHubAuthProvider)
     }
+
+    const ResetPassword = (email) => {
+        setLoading(true)
+        return sendPasswordResetEmail(auth, email)
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUser(user)
@@ -54,6 +60,7 @@ const AuthProvider = ({ children }) => {
         SignIn,
         SignInWithGoogle,
         SignInWithGitHub,
+        ResetPassword,
         logOut
     }
     return (
