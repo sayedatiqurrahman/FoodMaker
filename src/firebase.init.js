@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyC-tQxGMG0Rt6JxZnr-1LyDipLuvYe02GQ",
-    authDomain: "foodmaker-2af14.firebaseapp.com",
-    projectId: "foodmaker-2af14",
-    storageBucket: "foodmaker-2af14.appspot.com",
-    messagingSenderId: "913458366121",
-    appId: "1:913458366121:web:45d47ed20d12f3e2f9cbb8"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

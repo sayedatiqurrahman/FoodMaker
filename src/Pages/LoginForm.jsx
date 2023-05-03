@@ -21,7 +21,8 @@ const LoginForm = () => {
                 setSuccess('Loged in successfully');
                 navigate(location?.state?.pathname)
             })
-            .catch((err) => setError(err));
+            .catch(err => setError(err.message));
+        form.reset()
     }
 
     const handleGoogle = () => {
