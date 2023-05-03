@@ -16,6 +16,7 @@ const Header = () => {
                             className='h-auto md:h-[450px] lg:h-[600px]'
                             src="https://i.ibb.co/jkk4x08/image.png"
                             alt="Chef"
+                            placeholderSrc={'../assets/logo.png'}
                         />
                     </div>
                     <div className='absolute top-5 lg:left-[330px] z-20 max-w-xl w-full shadow-lg'>
@@ -42,6 +43,7 @@ const Header = () => {
                             className='h-auto md:h-[450px] lg:h-[600px]'
                             src="https://i.ibb.co/jkk4x08/image.png"
                             alt="Chef"
+                            placeholderSrc={'../assets/logo.png'}
                         />
                     </div>
                     <div className='absolute top-5 lg:left-[330px] z-20 max-w-xl w-full'>
@@ -69,6 +71,7 @@ const Header = () => {
                             className='h-auto md:h-[450px] lg:h-[600px]'
                             src="https://i.ibb.co/jkk4x08/image.png"
                             alt="Chef"
+                            placeholderSrc={'../assets/logo.png'}
                         />
                     </div>
                     <div className='absolute top-5 lg:left-[330px] z-20 max-w-xl w-full'>
@@ -96,6 +99,7 @@ const Header = () => {
                             className='h-auto md:h-[450px] lg:h-[600px]'
                             src="https://i.ibb.co/jkk4x08/image.png"
                             alt="Chef"
+                            placeholderSrc={'../assets/logo.png'}
                         />
                     </div>
                     <div className='absolute top-5 lg:left-[330px] z-20 max-w-xl w-full'>

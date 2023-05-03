@@ -59,7 +59,9 @@ const Footer = () => {
                 <LazyLoadImage
                     effect='blur'
                     className='h-24 mx-auto ' src="https://i.ibb.co/JHcw0GL/1-image-removebg-preview-1.png"
-                    alt="" />
+                    alt=""
+                    placeholderSrc={'../assets/logo.png'}
+                />
             </Link>
             <p className='-mt-8 textShadow '>Copyright © 2023 FoodMaker, Inc.</p>
         </div>

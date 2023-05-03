@@ -42,7 +42,11 @@ const Customers = ({ customers }) => {
                     <div className="absolute w-[90%] mb-5 top-2 left-1/2 -translate-x-1/2">
 
                         {/* Lazy Loader */}
-                        <LazyLoadImage effect="blur" className="border-2 mb-2 mx-auto border-gray-500 rounded-full " style={{ height: '100px', width: '100px', display: 'block' }} src={customer.image} />
+                        <LazyLoadImage effect="blur" className="border-2 mb-2 mx-auto border-gray-500 rounded-full "
+                            style={{ height: '100px', width: '100px', display: 'block' }}
+                            src={customer.image}
+                            placeholderSrc={'../../assets/logo.png'}
+                        />
                         {/* Name */}
                         <h2 className="text-gray-500 font2 text-3xl">{customer.customerName}</h2>
                         {/* Comment */}

@@ -40,7 +40,9 @@ const AllChef = ({ data }) => {
                         {/* Lazy Loader */}
                         <LazyLoadImage
                             effect="blur"
-                            className="w-[350px] h-[350px]" src={chef.chefPicture} alt="" />
+                            className="w-[350px] h-[350px]" src={chef.chefPicture}
+                            placeholderSrc={'../../assets/logo.png'}
+                            alt="" />
 
                         <div className=" absolute bottom-0 left-0 bg-gradient-to-t from-black to-transparent flex inset-0">
                             <div className="pl-3  mt-auto flex justify-between w-full text-left">

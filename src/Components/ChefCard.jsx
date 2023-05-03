@@ -20,8 +20,9 @@ const ChefCard = ({ chef }) => {
                 <LazyLoadImage
                     src={chefPicture}
                     effect='blur'
-                    className='LazyLoadImage h-[300px]  w-full rounded-lg absolute -top-10 left-0 bg-white p-1'
+                    className=' h-[300px]  w-full rounded-lg absolute -top-10 left-0 bg-white p-1'
                     alt=""
+                    placeholderSrc={'../assets/logo.png'}
                     key={id}
 
                 />
