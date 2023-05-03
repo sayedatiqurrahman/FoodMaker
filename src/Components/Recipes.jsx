@@ -3,8 +3,14 @@ import React, { useState } from 'react';
 import { FaStar, FaStarHalfAlt, FaThumbsUp } from 'react-icons/fa';
 import Rating from 'react-rating';
 import toast from 'react-hot-toast';
+import { useNavigation } from 'react-router-dom';
+import Loading from './Loading';
 
 const Recipes = ({ recipe }) => {
+    const navigation = useNavigation()
+    if (navigation.state === 'loading') {
+        return <Loading />
+    }
     const { name, image, ingredients, cookingMethod, likes, ratings } = recipe;
     const [favorite, setFavorite] = useState(false)
     const handleFavorite = () => {

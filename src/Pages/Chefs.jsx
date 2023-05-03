@@ -1,8 +1,14 @@
 import React, { useContext } from 'react';
-import AllChef from '../Components/allChef';
 import { DataContext } from '../App';
+import AllChef from '../Components/AllChef/allChef';
+import { useNavigation } from 'react-router-dom';
+import Loading from '../Components/Loading';
 
 const Chefs = () => {
+    const navigation = useNavigation()
+    if (navigation.state === 'loading') {
+        return <Loading />
+    }
     const data = useContext(DataContext)
     return (
         <div className='text-center mt-5'>

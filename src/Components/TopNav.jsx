@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { HiMenuAlt3 } from "react-icons/hi";
 import { GiCrossedBones } from "react-icons/gi";
 import Tooltip from '@mui/material/Tooltip';
+import { AuthContext } from './AuthProvider';
 const TopNav = () => {
+    const { user, logOut } = useContext(AuthContext)
     const [showMenu, setShowMenu] = useState(false)
-    const [user, setUser] = useState(null)
 
+    const { displayName, email, photoURL } = user || "";
 
     return (
         <>
@@ -23,7 +25,11 @@ const TopNav = () => {
 
                 </div>
                 <div>
-                    {user ? <img className='h-10 w-10 border border-gray-300 rounded-full' src="https://i.ibb.co/Rbqk5W0/image.png" title='User Name' alt="" /> : <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/login'} >Login</NavLink>
+                    {user ? <div className='flex gap-3 flex-wrap'>
+                        <button onClick={() => logOut()} >Log out</button>
+                        <img className='h-10 w-10 border border-gray-300 rounded-full' src={photoURL || `https://i.ibb.co/Rbqk5W0/image.png`} title={displayName || `User Name`} alt="" />
+                    </div>
+                        : <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/login'} >Login</NavLink>
                     }
 
                 </div>
@@ -32,7 +38,7 @@ const TopNav = () => {
             <div className='md:hidden  mt-5 shadow-lg pb-4 rounded-lg'>
                 <div className='flex justify-between mx-auto items-center   w-[97%]'>
                     <div>
-                        <img className='h-10 w-10 border border-gray-300 rounded-full' src="https://i.ibb.co/Rbqk5W0/image.png" title='User Name' alt="" />
+                        <img className='h-10 w-10 border border-gray-300 rounded-full' src={photoURL || `https://i.ibb.co/Rbqk5W0/image.png`} title={displayName || `User Name`} alt="" />
                     </div>
 
                     <Link to='/' className='font-bold flex items-center '>
@@ -52,6 +58,7 @@ const TopNav = () => {
                         <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/'}>Home</NavLink>
                         <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/chefs'}>Chefs</NavLink>
                         <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/blog'}>Blog</NavLink>
+                        {user ? <button onClick={() => logOut()} >Log out</button> : <NavLink className={({ isActive }) => isActive ? 'active' : 'default'} to={'/login'} >Login</NavLink>}
                     </div> : ''
                 }
             </div>

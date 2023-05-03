@@ -15,6 +15,8 @@ import Registaion from './Pages/Registaion.jsx';
 import LoginForm from './Pages/LoginForm.jsx';
 import toast, { Toaster } from 'react-hot-toast';
 import ErrorPage from './Pages/ErrorPage.jsx';
+import AuthProvider from './Components/AuthProvider.jsx';
+import PrivateRoute from './Pages/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +34,7 @@ const router = createBrowserRouter([
     },
     {
       path: "chef/:id",
-      element: <ChefRecipes />,
+      element: <PrivateRoute><ChefRecipes /></PrivateRoute>,
       loader: ({ params }) => fetch(`https://server-side-atiqurrahman.vercel.app/singleChef/${params.id}`)
     }
       , {
@@ -59,6 +61,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
