@@ -19,8 +19,6 @@ const ChefRecipes = () => {
         if (!booked) {
             toast.success('You Selected Booked this Chef!')
             setBooked(true);
-        } else {
-            toast.error('You are already Booked this Chef!')
         }
     }
 
@@ -32,12 +30,16 @@ const ChefRecipes = () => {
 
 
                 <div className="w-full font-normal  leading-6">
-                    <h1 className='text-3xl font2'>{chefName}</h1>
 
-                    {bio}
+                    <h1 className='text-3xl font2'>{chefName}</h1>
+                    <p>{bio}</p>
+
                     <p><b>Years of Experience: <span className='text-yellow-500'>{yearsOfExperience}</span> </b></p>
+
                     <p><b>Number of Recipes: <span className='text-yellow-500'>{numberOfRecipes}</span></b></p>
+
                     <div className='flex justify-between max-w-xs w-full mt-3'>
+
                         <p className='flex items-center gap-1'><FaThumbsUp /> <b>{likes}</b></p>
 
                         <p className=''> <b>Rating:</b>
@@ -50,7 +52,7 @@ const ChefRecipes = () => {
                             />
                             <b>{ratings}.00</b> </p>
                     </div>
-
+                    {/* Booking Chef Button */}
                     <button onClick={handleFavorite} disabled={booked && true} className={`w-full md:px-20 lg:px-32 py-3 border-l-2 md:border-l-0 border-r-2 border-y-2  font-bold  text-xl font2 rounded-l-full md:rounded-l-none rounded-r-full h-10 mt-5 -ml-5 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg ${booked ? 'text-gray-600 border-gray-500' : 'border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white'}`} >{booked ? 'Booked' : 'Book Now'}</button>
 
 
@@ -63,6 +65,7 @@ const ChefRecipes = () => {
                 <p className='font2 text-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black'>All Recipes of {chefName} Are Here</p>
             </div>
 
+            {/* recipies cards */}
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     recipes.map(recipe => <Recipes key={recipe.id} recipe={recipe} />)

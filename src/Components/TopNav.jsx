@@ -12,6 +12,7 @@ const TopNav = () => {
 
     return (
         <>
+            {/* Large Screen Navebar */}
             <div className='hidden md:flex justify-between font-semibold'>
                 <div>
                     <Link to='/' className='text-2xl flex'>
@@ -34,7 +35,7 @@ const TopNav = () => {
 
                 </div>
             </div>
-
+            {/* Phone Navbar */}
             <div className='md:hidden  mt-5 shadow-lg pb-4 rounded-lg'>
                 <div className='flex justify-between mx-auto items-center   w-[97%]'>
                     <div>

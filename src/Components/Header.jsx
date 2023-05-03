@@ -1,6 +1,6 @@
 import { Carousel } from 'flowbite-react';
 import React from 'react';
-
+// Lazy loading
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -9,6 +9,7 @@ const Header = () => {
     return (
         <div className="h-[calc(100vh-77px)] mt-5 border-b border-b-gray-400">
             <Carousel>
+                {/* Carousel 1 */}
                 <div className='h-full relative'>
                     <div className='absolute left-2 -bottom-2'>
                         <LazyLoadImage effect='blur'
@@ -34,6 +35,7 @@ const Header = () => {
                     <img className='absolute top-1/2 z-0 -translate-y-1/2 -right-6' src="https://i.ibb.co/vLdbbqP/pattern-blackboard-drawn-chalk-gastronomy-icons-vector-cuisine-fast-food-cafe-bright-background-menu.png" alt="" />
 
                 </div>
+                {/* Carousel 2 */}
                 <div className='h-full relative  '>
                     <div className='absolute left-2 -bottom-2'>
                         <LazyLoadImage effect='blur'
@@ -59,6 +61,8 @@ const Header = () => {
                     <img className='absolute top-1 z-0 -translate-y-1/2 -right-6' src="https://i.ibb.co/vLdbbqP/pattern-blackboard-drawn-chalk-gastronomy-icons-vector-cuisine-fast-food-cafe-bright-background-menu.png" alt="" />
 
                 </div>
+
+                {/* Carousel 3 */}
                 <div className='h-full relative '>
                     <div className='absolute left-2 -bottom-2'>
                         <LazyLoadImage effect='blur'
@@ -84,6 +88,8 @@ const Header = () => {
                     <img className='absolute bottom-0 z-0  -right-6' src="https://i.ibb.co/vLdbbqP/pattern-blackboard-drawn-chalk-gastronomy-icons-vector-cuisine-fast-food-cafe-bright-background-menu.png" alt="" />
 
                 </div>
+
+                {/* Carousel 4 */}
                 <div className='h-full relative '>
                     <div className='absolute left-2 -bottom-2'>
                         <LazyLoadImage effect='blur'

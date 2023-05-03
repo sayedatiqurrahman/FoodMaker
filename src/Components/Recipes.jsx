@@ -5,7 +5,7 @@ import Rating from 'react-rating';
 import toast from 'react-hot-toast';
 import { useNavigation } from 'react-router-dom';
 import Loading from './Loading';
-
+// Lazy Loading
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -15,7 +15,9 @@ const Recipes = ({ recipe }) => {
         return <Loading />
     }
     const { name, image, ingredients, cookingMethod, likes, ratings } = recipe;
+
     const [favorite, setFavorite] = useState(false)
+
     const handleFavorite = () => {
         if (!favorite) {
             toast.success('You Selected this as favourite!')
@@ -24,7 +26,6 @@ const Recipes = ({ recipe }) => {
             toast.error('You already Selected this!')
         }
     }
-    const disabled = true;
     return (
 
 
@@ -57,8 +58,8 @@ const Recipes = ({ recipe }) => {
 
 
                 </div>
-
-                <button onClick={handleFavorite} disabled={favorite && disabled} className={`px-5 py-2  border-t-2 border-x-2 font-bold  rounded-t-full h-10 -mb-7 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg ${favorite ? 'text-gray-600 border-gray-500' : 'border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white'}`}  >Favourite</button>
+                {/* Button */}
+                <button onClick={handleFavorite} disabled={favorite && true} className={`px-5 py-2  border-t-2 border-x-2 font-bold  rounded-t-full h-10 -mb-7 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg ${favorite ? 'text-gray-600 border-gray-500' : 'border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white'}`}  >Favourite</button>
             </Card>
         </div >
 

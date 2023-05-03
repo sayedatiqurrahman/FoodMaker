@@ -11,6 +11,7 @@ const Blog = () => {
                     {({ toPdf }) => <button className='text-2xl drop-shadow-md transition-all duration-200 border-2 border-gray-400 px-10 rounded-full text-lg font-bold py-1 mt-4 bg-gray-700 hover:bg-gray-400 hover:text-gray-900 font2' onClick={toPdf}>Generate Pdf</button>}
                 </Pdf>
             </div>
+            {/* will generate data */}
             <div ref={ref} className=' py-[130px] px-10 max-w-3xl mx-auto text-gray-400'>
 
 

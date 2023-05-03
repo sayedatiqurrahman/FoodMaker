@@ -4,6 +4,7 @@ import AllChef from '../Components/AllChef/allChef';
 import { useNavigation } from 'react-router-dom';
 
 const Chefs = () => {
+    // loading functionality
     const navigation = useNavigation()
     if (navigation.state === 'loading') {
         return <Loading />

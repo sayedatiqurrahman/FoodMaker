@@ -6,17 +6,20 @@ const Footer = () => {
     return (
         <div className='text-center mt-[130px] pt-[130px]'>
             <hr className='border-gray-600' />
+            {/* Heading Started */}
             <h1 className='pt-[130px] fontScript '>Newsletter
             </h1>
             <div className='relative mb-10'>
                 <hr className='w-72 -mt-12 border border-gray-500 mx-auto ' />
-                <p className='absolute -top-5  bg-black left-1/2 -translate-x-1/2 
-                      text-7xl font-thin  rotate-12'>"</p>
+                <p className='absolute -top-5  bg-black left-1/2 -translate-x-1/2 text-7xl font-thin rotate-12'>"</p>
             </div>
             <p className='font2 text-lg mb-7'>Subscribe to our mailing list</p>
+            {/* Heading Finish */}
 
             <div className='relative mx-auto mb-20 w-full sm:w-96 md:w-[500px]'>
+                {/* Subscribe Email */}
                 <input required className='h-10 w-full sm:w-96 md:w-[500px] bg-transparent border-2 border-gray-500 rounded-full' type="email" placeholder='Enter Your Email' />
+                {/* Subscribe button */}
                 <button className='absolute -top-4  right-0 drop-shadow-md transition-all duration-200 border-2 border-gray-400 px-10 rounded-full text-lg font-bold py-1 mt-4 bg-gray-700 hover:bg-gray-400 hover:text-gray-900' type="submit">Subscribe</button>
             </div>
 

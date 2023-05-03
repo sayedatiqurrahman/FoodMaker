@@ -10,6 +10,7 @@ const LoginForm = () => {
     const [error, setError] = useState(null)
 
     const { SignIn, SignInWithGitHub, SignInWithGoogle } = useContext(AuthContext)
+    // login
     const handleLogin = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -24,7 +25,7 @@ const LoginForm = () => {
             .catch(err => setError(err.message));
         form.reset()
     }
-
+    // login with google
     const handleGoogle = () => {
         setError('')
         setSuccess('')
@@ -36,6 +37,7 @@ const LoginForm = () => {
             })
             .catch((err) => setError('Google:' + err))
     }
+    // login with github
     const handleGithub = () => {
         setError('')
         setSuccess('')
@@ -56,11 +58,18 @@ const LoginForm = () => {
             </div>
             <div className='w-full mt-28'>
                 <form onSubmit={handleLogin} className='flex flex-col gap-5 '>
+                    {/* Email Input */}
                     <input name='email' className=' focus:outline-none py-2 px-3  bg-[#d6b6251e] rounded-lg' placeholder='Enter Your Email' type="email" required />
 
+                    {/* Password Input */}
+
                     <input name='password' className='max-w-96 w-full focus:outline-none py-2 px-3 bg-[#d6b6251e] rounded-lg' placeholder='Enter Your Password' type="password" required />
+
+                    {/* Error or Success Message */}
                     <p className='text-green-500 text-center'><small>{success}</small></p>
                     <p className='text-red-500 text-center'><small>{error}</small></p>
+
+                    {/* Submit Button */}
                     <button type='submit' className=' bg-opacity-20 bg-[#d6b6251e] py-2 font-semibold rounded-xl'>Login</button>
                     <Link className='text-yellow-700 hover:underline text-center'>Forget Password</Link>
 

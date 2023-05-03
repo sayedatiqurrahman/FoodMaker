@@ -13,8 +13,10 @@ const ChefCard = ({ chef }) => {
     return (
 
         <div className='max-w-sm  relative text-left'>
+            {/* Card From FlowBite */}
             <Card className='max-h-[550px] h-auto'
             >
+                {/* Lazy Loader */}
                 <LazyLoadImage
                     src={chefPicture}
                     effect='blur'
@@ -29,9 +31,13 @@ const ChefCard = ({ chef }) => {
                     {chefName}
                 </h5>
                 <div className="font-normal text-gray-700 dark:text-gray-400">
-                    {bio.length > 80 ? <>{bio.slice(0, 80)}... </> : bio}
+
+                    <p>{bio.length > 80 ? <>{bio.slice(0, 80)}... </> : bio}</p>
+
                     <p><b>Years of Experience: <span className='text-yellow-500'>{yearsOfExperience}</span> </b></p>
+
                     <p><b>Number of Recipes: <span className='text-yellow-500'>{numberOfRecipes}</span></b></p>
+
                     <div className='flex justify-between w-full mb-5'>
                         <p className='flex items-center gap-1'><FaThumbsUp /> <b>{likes}</b></p>
 
@@ -46,6 +52,8 @@ const ChefCard = ({ chef }) => {
                             <b>{ratings}.00</b></p>
                     </div>
 
+
+                    {/* View Recipes button / link */}
                     <Link to={`../chef/${chef.id}`} className="px-5 py-2  border-t-2 border-x-2 absolute bottom-0 left-1/2 -translate-x-1/2 font-bold border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white rounded-t-full text-center h-10 w-[80%] transition-all duration-200 drop-shadow-lg hover:shadow-lg">View Recipes</Link>
 
                 </div>

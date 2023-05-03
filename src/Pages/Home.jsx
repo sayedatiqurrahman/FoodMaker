@@ -13,6 +13,7 @@ const Home = () => {
     }
     const data = useContext(DataContext)
     const [customers, setCustomers] = useState(null)
+    // fetch data
     useEffect(() => {
         fetch('https://server-side-atiqurrahman.vercel.app/customer')
             .then(res => res.json())
@@ -22,10 +23,12 @@ const Home = () => {
     return (
         <div>
             <Header />
+            {/* All Chefs Data from here */}
             <div className="my-[130px] text-center ">
                 <h2 className="text-2xl  font2">All The Chefs At Your Fingertips</h2>
                 <AllChef data={data} />
 
+                {/* Customer section */}
                 <div className='my-[130px]'>
                     <h2 className="text-3xl  font2">What Customers Are Saying
                         About Us</h2>
@@ -45,6 +48,7 @@ const Home = () => {
 
 
             <div className='mb-[130px]'>
+                {/* contact component */}
                 <Contact />
             </div>
         </div>
