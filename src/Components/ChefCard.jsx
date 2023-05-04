@@ -3,18 +3,18 @@ import React from 'react';
 import Rating from 'react-rating';
 import { FaStar, FaStarHalfAlt, FaThumbsUp } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import placholderImage from '../assets/logo.png'
-
+import logo from '/logo.png'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const ChefCard = ({ chef }) => {
     const { id, chefPicture, chefName, bio, ratings, likes, yearsOfExperience, numberOfRecipes } = chef
 
     return (
 
-        <div className='max-w-sm  relative text-left'>
+        <div className=' mx-auto relative text-left'>
             {/* Card From FlowBite */}
-            <Card className='max-h-[550px] h-auto'
+            <Card className=''
             >
                 {/* Lazy Loader */}
                 <LazyLoadImage
@@ -22,7 +22,6 @@ const ChefCard = ({ chef }) => {
                     effect='blur'
                     className=' h-[300px]  w-full rounded-lg absolute -top-10 left-0 bg-white p-1'
                     alt=""
-                    placeholderSrc={'../assets/logo.png'}
                     key={id}
 
                 />
@@ -52,7 +51,6 @@ const ChefCard = ({ chef }) => {
                             />
                             <b>{ratings}.00</b></p>
                     </div>
-
 
                     {/* View Recipes button / link */}
                     <Link to={`../chef/${chef.id}`} className="px-5 py-2  border-t-2 border-x-2 absolute bottom-0 left-1/2 -translate-x-1/2 font-bold border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white rounded-t-full text-center h-10 w-[80%] transition-all duration-200 drop-shadow-lg hover:shadow-lg">View Recipes</Link>

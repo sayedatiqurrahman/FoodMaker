@@ -4,6 +4,7 @@ import { app } from '../firebase.init';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 export const AuthContext = createContext(null)
+
 const AuthProvider = ({ children }) => {
     // Auth Providers
     const GitHubAuthProvider = new GithubAuthProvider()

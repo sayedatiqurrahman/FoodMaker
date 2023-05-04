@@ -7,15 +7,19 @@
 }
 
 .fontScript {
-    font-size: 140px;
+
     font-family: 'Style Script', cursive;
+    @apply md:text-[140px] text-5xl mb-2
 }
 
 .textShadow {
     text-shadow: 1px 1px 2px rgb(44, 39, 39), 0 0 1em rgb(8, 8, 17), 0 0 0.2em rgb(8, 8, 20);
     ;
 }
-
+.textShadow2 {
+    text-shadow: 2px 2px 2px rgb(0, 0, 0), 0 0 1em rgb(8, 8, 17), 0 0 0.2em rgb(8, 8, 20);
+    ;
+}
 .font2 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;

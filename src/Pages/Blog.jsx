@@ -4,15 +4,19 @@ import Pdf from "react-to-pdf";
 const Blog = () => {
     const ref = createRef();
     return (
-        <div className='p-[130px]'>
+        <div className='p-1 sm:p-5 md:p-[130px] '>
+            <h2 className="fontScript">Welcome</h2>
+            <p className="text-xl -mt-5  font2">to_ FoodMaker Blog page</p>
+
             <div className='text-center'>
 
+
                 <Pdf targetRef={ref} className="mx-auto" filename="code-example.pdf">
-                    {({ toPdf }) => <button className='text-2xl drop-shadow-md transition-all duration-200 border-2 border-gray-400 px-10 rounded-full font-bold py-1 mt-4 bg-gray-700 hover:bg-gray-400 hover:text-gray-900 font2' onClick={toPdf}>Generate Pdf</button>}
+                    {({ toPdf }) => <button className='text-2xl drop-shadow-md transition-all duration-200 border-2 border-gray-400 px-4 w-[200px] md:w-[300px] md:px-10 rounded-full font-bold py-1 mt-4 bg-gray-700 hover:bg-gray-400 hover:text-gray-900 font2' onClick={toPdf}>Generate Pdf</button>}
                 </Pdf>
             </div>
             {/* will generate data */}
-            <div ref={ref} className=' py-[130px] px-10 max-w-3xl mx-auto text-gray-400'>
+            <div ref={ref} className=' py-[130px] px-4 md:px-10 max-w-3xl w-full mx-auto text-gray-400'>
 
 
 

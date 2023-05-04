@@ -24,7 +24,7 @@ const ChefRecipes = () => {
 
     return (
         <>
-            <div className='flex md:flex-row mt-10 flex-col justify-center gap-5 mx-auto items-center max-w-4xl w-[90%]'>
+            <div className='flex lg:flex-row mt-10 flex-col justify-center gap-5 mx-auto items-center max-w-4xl w-[90%]'>
 
                 <img className='w-96 mx-auto  h-[500px] ml-auto rounded-lg shadow-md' src={chefPicture} alt="" />
 
@@ -53,16 +53,16 @@ const ChefRecipes = () => {
                             <b>{ratings}.00</b> </p>
                     </div>
                     {/* Booking Chef Button */}
-                    <button onClick={handleFavorite} disabled={booked && true} className={`w-full md:px-20 lg:px-32 py-3 border-l-2 md:border-l-0 border-r-2 border-y-2  font-bold  text-xl font2 rounded-l-full md:rounded-l-none rounded-r-full h-10 mt-5 -ml-5 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg ${booked ? 'text-gray-600 border-gray-500' : 'border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white'}`} >{booked ? 'Booked' : 'Book Now'}</button>
+                    <button onClick={handleFavorite} disabled={booked && true} className={`w-full md:px-20  lg:px-32 py-3 border-l-2 lg:border-l-0 border-r-2 border-y-2  font-bold lg:text-xl font2 rounded-l-full lg:rounded-l-none rounded-r-full h-10 mt-5 -ml-5 flex justify-center items-center transition-all duration-200 drop-shadow-lg hover:shadow-lg ${booked ? 'text-gray-600 border-gray-500' : 'border-yellow-400 text-xl font2 text-yellow-500 hover:bg-yellow-400 hover:text-white'}`} >{booked ? 'Booked' : 'Book Now'}</button>
 
 
                 </div>
 
 
             </div>
-            <div className='relative'>
+            <div className='relative py-5 text-center'>
                 <hr className='border border-gray-500 rounded-lg my-10 max-w-3xl mx-auto w-[90%]' />
-                <p className='font2 text-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black'>All Recipes of {chefName} Are Here</p>
+                <p className='font2 md:text-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 textShadow2 bg-black'>All Recipes of {chefName} Are Here</p>
             </div>
 
             {/* recipies cards */}

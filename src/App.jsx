@@ -9,7 +9,7 @@ export const DataContext = createContext()
 function App() {
   const data = useLoaderData()
   return (
-    <div className="MyContainer mt-4 ">
+    <div className="MyContainer mt-4">
       <TopNav />
       <div className="min-h-[calc(100vh-155px)]">
         <DataContext.Provider value={data}>
