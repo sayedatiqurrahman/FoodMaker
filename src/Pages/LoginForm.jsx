@@ -37,7 +37,7 @@ const LoginForm = () => {
                 setSuccess('Login with Google successfully')
                 navigate(location?.state?.pathname)
             })
-            .catch((err) => setError('Google:' + err))
+            .catch((err) => setError('Google:' + err.message))
     }
     // login with github
     const handleGithub = () => {
@@ -49,7 +49,7 @@ const LoginForm = () => {
                 setSuccess('Login with GitHub successfully')
                 navigate(location?.state?.pathname)
             })
-            .catch((err) => setError('Github:' + err))
+            .catch((err) => setError('Github:' + err.message))
     }
 
     // Reset password
