@@ -1,9 +1,10 @@
-import React, { useContext, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Components/AuthProvider';
 import { getAuth, updateProfile } from 'firebase/auth';
 import { app } from '../firebase.init';
+import { useState } from 'react';
+import { useContext } from 'react';
 const Registation = () => {
     const auth = getAuth(app);
     const [success, setSuccess] = useState(null)
@@ -52,10 +53,10 @@ const Registation = () => {
                 }).then(() => {
                     setSuccess("Account Update Successfully")
                 }).catch((error) => {
-                    setError(error)
+                    setError(error.message)
                 });
             })
-            .catch(error => setError(error))
+            .catch(error => setError(error.message))
 
 
 
